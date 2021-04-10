@@ -1,0 +1,68 @@
+.container {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.userAvatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.userInfo {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 15px;
+}
+.userInfo > div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+.userInfo > span {
+    text-overflow: ellipsis;
+    border: 0;
+    cursor: auto;
+    width: 50px;
+    height: 80px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userStatus {
+    display: flex;
+    flex-direction: column;
+    text-overflow: ellipsis;
+    justify-content: space-between;
+}
+
+.status {
+    text-overflow: ellipsis;
+    font-style: italic;
+    font-weight: bold;
+}
+.followButton {
+    width: 70px;
+    height: 30px;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgba(65, 65, 65, 1);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.followButton:hover {
+    background-color: rgb(105, 105, 105);
+}

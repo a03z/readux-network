@@ -1,0 +1,60 @@
+li {
+    list-style: circle;
+    font-size: 16px;
+}
+.dialogs {
+    display: grid;
+    height: calc(100vh - 15px);
+    grid-template-columns: 1fr 2fr;
+}
+.dialogsList {
+    border-right: 1px solid rgba(253, 112, 19, 1);
+    height: calc(100vh - 15px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.dialog {
+    color: black;
+    font-size: 16px;
+}
+.messages {
+    border-left: 1px solid rgba(253, 112, 19, 1);
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr 100px;
+}
+
+.messages > div {
+    max-width: 600px;
+}
+.messages > div > p {
+    text-overflow: ellipsis;
+    max-width: 600px;
+}
+.active {
+    font-size: 1.5em;
+}
+.newMessage {
+    background-color: rgb(236, 236, 236);
+    width: 95%;
+    padding: 15px;
+}
+.newMessage:focus {
+    background-color: rgb(241, 241, 241);
+}
+.messageSend {
+    color: white;
+    position: relative;
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    text-align: left;
+    padding: 5px 15px;
+    background-color: rgba(65, 65, 65, 1);
+    cursor: pointer;
+    transition: all 20ms ease-in-out;
+}
+.messageSend:active {
+    background-color: rgba(127, 255, 212, 0.733);
+}

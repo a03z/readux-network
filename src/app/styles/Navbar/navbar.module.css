@@ -1,0 +1,100 @@
+.nav {
+    grid-area: s;
+    padding: 20px 0;
+}
+.navSettings {
+    margin-top: 25px;
+}
+
+.nav li {
+    list-style: none;
+}
+.avatar {
+    width: 50px;
+    height: 50px;
+    margin: 15px 0;
+    border-radius: 50%;
+}
+.friends {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-top: 35px;
+    color: white;
+}
+.friendList {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.friend {
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+
+.navbarLink {
+    border-left: 6px solid rgba(202, 62, 71, 1);
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.5rem;
+    color: #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all 0.35s;
+}
+
+.navbarLink span {
+    position: relative;
+    z-index: 2;
+}
+
+.navbarLink:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(202, 62, 71, 1);
+    transition: all 0.35s;
+}
+
+.navbarLink:hover {
+    color: #fff;
+}
+
+.navbarLink:hover:after {
+    width: 100%;
+}
+
+.active {
+    border-left: 6px solid rgba(65, 65, 65, 1);
+}
+.active:hover {
+    border-left: 6px solid rgba(202, 62, 71, 1);
+}
+
+nav > ul > li {
+    margin: 10px 0;
+}
+
+nav > a {
+    color: black;
+}
+
+.navIcon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+@media (max-width: 650px) {
+    .navbarLink {
+        width: auto;
+    }
+}

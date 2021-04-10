@@ -1,0 +1,73 @@
+.imageParallax {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    display: flex;
+    align-items: center;
+}
+.imageParallax img {
+    top: 50px;
+}
+
+.wallpaper {
+    width: 100%;
+}
+.profileInfo {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.avatar {
+    width: 150px;
+    height: 150px;
+    margin: 15px 0;
+    border-radius: 50%;
+}
+
+.avatarContainer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    flex-basis: 200px;
+}
+
+.uploadAvatar {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.avatarContainer:hover .uploadAvatar {
+    visibility: visible;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+}
+
+.uploadInput {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.editProfile {
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    visibility: hidden;
+    background: none;
+    position: relative;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.profileInfo:hover .editProfile {
+    visibility: visible;
+    opacity: 1;
+}

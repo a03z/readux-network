@@ -1,0 +1,55 @@
+.post {
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 40px 1fr 100px;
+    font-weight: normal;
+}
+.post:hover .deletePost {
+    display: block;
+}
+
+.postAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 5px;
+    justify-content: start;
+}
+.postText {
+    text-indent: 30px;
+    max-width: 90%;
+    text-align: left;
+    margin: auto 15px;
+}
+.deletePost {
+    display: none;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.1s ease-in-out;
+}
+
+.deletePost:hover {
+    opacity: 1;
+}
+
+.likesCount {
+    grid-row: 1;
+    grid-column: 3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.thumbUp {
+    width: 30px;
+    height: 30px;
+}

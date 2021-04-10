@@ -1,0 +1,20 @@
+.contactContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.contactContainer a {
+    border: 1px solid black;
+    flex-basis: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.contactContainer textarea {
+    height: 50px;
+    width: 45%;
+    margin-top: 5px;
+    border: 1px solid rgb(155, 155, 155);
+}

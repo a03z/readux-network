@@ -1,0 +1,28 @@
+.statusInput {
+    background-color: rgb(236, 236, 236);
+    width: 200px;
+    height: 50px;
+    padding: 15px;
+    margin-left: 25px;
+    text-overflow: ellipsis;
+}
+
+.statusSpan {
+    background-color: rgb(236, 236, 236);
+    padding: 15px;
+    justify-content: start;
+    margin-left: 25px;
+    border-radius: 10px;
+    border: 2px solid rgba(49, 49, 49, 1);
+    cursor: pointer;
+    grid-column: 3;
+    grid-row: 1;
+}
+.noStatusSpan {
+    background-color: rgb(236, 236, 236);
+    padding: 15px;
+    justify-content: start;
+    margin-left: 25px;
+    font-weight: bold;
+    font-style: italic;
+}

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+.header {
+    grid-area: h;
+    background-color: rgba(65, 65, 65, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    overflow: hidden;
+    user-select: none;
+}
+
+.loginBlock {
+    width: 200px;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    height: auto;
+    width: 160px;
+    color: white;
+}
+.userName {
+    padding: 6px;
+    cursor: pointer;
+    background: rgba(162, 169, 175, 1);
+}
+
+.logoutButton {
+    background: rgba(162, 169, 175, 1);
+    width: 120px;
+    height: 35px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 16px;
+    cursor: pointer;
+
+    position: relative;
+    transition: all 0.35s;
+}
+
+.logoutButton span {
+    position: relative;
+    z-index: 2;
+    height: 20px;
+}
+
+.logoutButton:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(97, 96, 96);
+    transition: all 0.35s;
+}
+
+.logoutButton:hover {
+    color: #fff;
+}
+
+.logoutButton:hover:after {
+    width: 100%;
+}
+
+.logoutIcon {
+    width: 20px;
+    height: 20px;
+}
