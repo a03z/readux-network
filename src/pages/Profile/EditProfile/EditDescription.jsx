@@ -1,5 +1,5 @@
 import { CheckIcon } from '@heroicons/react/solid'
-import React from 'react'
+
 import s from '../../../app/styles/Profile/profile-description.module.css'
 import {
     createField,

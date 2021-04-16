@@ -1,4 +1,3 @@
-import React from 'react'
 import s from '../../../app/styles/Users/users.module.css'
 import { UserIcon } from '@heroicons/react/solid'
 import { NavLink } from 'react-router-dom'

@@ -1,4 +1,3 @@
-import React from 'react'
 import s from './contacts.module.css'
 
 const Contact = ({ contactTitle, contactValue }) => {

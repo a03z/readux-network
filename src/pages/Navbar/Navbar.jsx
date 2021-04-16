@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import s from '../../app/styles/Navbar/navbar.module.css'
 import {

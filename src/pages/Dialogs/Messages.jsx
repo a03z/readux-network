@@ -1,4 +1,3 @@
-import React from 'react'
 import { Field, Form } from 'react-final-form'
 import s from '../../app/styles/Dialogs/Dialogs.module.css'
 import { maxLength } from '../../entities/validators/validators'

@@ -28,3 +28,10 @@ a {
     text-decoration: none;
     color: white;
 }
+input[name='captcha'] {
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    padding: 15px;
+}

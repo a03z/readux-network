@@ -1,4 +1,3 @@
-import React from 'react'
 import Preloader from '../../features/preloader/Preloader'
 import MyPosts from './myPosts/MyPosts'
 import s from '../../app/styles/Profile/profile.module.css'

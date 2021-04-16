@@ -1,5 +1,5 @@
 import { BanIcon, CheckIcon } from '@heroicons/react/solid'
-import React from 'react'
+
 import s from '../../../app/styles/Profile/profile-description.module.css'
 import { Contacts } from '../../../features/Contacts/Contacts'
 export default function ProfileDescription(props) {

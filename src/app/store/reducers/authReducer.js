@@ -1,4 +1,5 @@
 import { authApi, securityApi } from '../../../shared/API/API'
+import { toggleIsFetching } from './usersReducer'
 
 const SET_USER_DATA = 'SET_USER_DATA'
 const GET_CAPTCHA_URL = 'GET_CAPTCHA_URL'
@@ -54,6 +55,7 @@ export const getAuthUserData = () =>
 export const login = (email, password, rememberMe, id, isAuth, captcha) =>
     // thunk
     async (dispatch) => {
+        dispatch(toggleIsFetching(true))
         const res = await authApi.login(email, password, rememberMe, captcha)
         if (res.data.resultCode === 0) {
             dispatch(getAuthUserData())
@@ -62,6 +64,7 @@ export const login = (email, password, rememberMe, id, isAuth, captcha) =>
         } else if (res.data.resultCode === 10) {
             dispatch(getCaptchaUrl())
         }
+        dispatch(toggleIsFetching(false))
     }
 // thunk creator
 export const logout = () =>

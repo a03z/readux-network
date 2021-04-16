@@ -1,4 +1,3 @@
-import React from 'react'
 import { Field } from 'react-final-form'
 import s from './formcontrols.module.css'
 

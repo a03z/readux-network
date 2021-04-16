@@ -9,7 +9,7 @@ import Preloader from './features/preloader/Preloader'
 import Header from './pages/Header/Header'
 import Navbar from './pages/Navbar/Navbar'
 import autosize from 'autosize'
-import { Route } from 'react-router'
+import { Redirect, Route } from 'react-router'
 import { connect } from 'react-redux'
 
 const DialogsContainer = React.lazy(() =>
@@ -20,10 +20,10 @@ const ProfileContainer = React.lazy(() =>
     import('./pages/Profile/ProfileContainer')
 )
 
-const App = (props) => {
+const App = ({ initializeApp, ...props }) => {
     useEffect(() => {
-        props.initializeApp()
-    }, [props])
+        initializeApp()
+    }, [initializeApp])
     autosize(document.querySelectorAll('textarea'))
     autosize(document.querySelectorAll('input'))
     if (!props.initialized) {
@@ -35,6 +35,7 @@ const App = (props) => {
                 <Navbar />
                 <div className="app-wrapper-content">
                     <Suspense fallback={<Preloader />}>
+                        <Redirect from="/" to="/profile" />
                         <Route
                             path="/profile/:userId?"
                             render={() => <ProfileContainer />}

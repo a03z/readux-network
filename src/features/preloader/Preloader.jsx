@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import preloader from '../../entities/assets/loading.svg'
 import s from '../../app/styles/preloader.module.css'
 

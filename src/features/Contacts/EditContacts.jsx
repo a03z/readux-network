@@ -1,4 +1,3 @@
-import React from 'react'
 import { createField, FormGenerator } from '../FormControls/FormControls'
 import s from './contacts.module.css'
 

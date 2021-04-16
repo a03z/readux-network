@@ -1,4 +1,3 @@
-import React from 'react'
 import { logout } from '../../app/store/reducers/authReducer'
 import { CodeIcon, LogoutIcon } from '@heroicons/react/solid'
 import s from '../../app/styles/Header/header.module.css'

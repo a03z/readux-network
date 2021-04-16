@@ -14,15 +14,16 @@ import { LoginIcon } from '@heroicons/react/solid'
 import { Form } from 'react-final-form'
 import { Redirect } from 'react-router'
 import { connect } from 'react-redux'
+import Preloader from '../../features/preloader/Preloader'
 
-const LoginForm = ({ onSubmit, captchaUrl }) => {
+const LoginForm = ({ onSubmit, captchaUrl, isFetching }) => {
     let Input = FormGenerator('input')
 
     useEffect(() => {
         document.title = 'Login'
     }, [])
 
-    return (
+    isFetching ? (
         <Form onSubmit={onSubmit}>
             {({ handleSubmit, pristine, form, submitting }) => (
                 <form className={s.loginForm} onSubmit={handleSubmit}>
@@ -96,6 +97,8 @@ const LoginForm = ({ onSubmit, captchaUrl }) => {
                 </form>
             )}
         </Form>
+    ) : (
+        <Preloader />
     )
 }
 const Login = ({ login, isAuth, logError, captchaUrl }) => {
@@ -136,6 +139,7 @@ const mapStateToProps = (state) => {
         isAuth: state.auth.isAuth,
         logError: state.auth.logError,
         captchaUrl: state.auth.captchaUrl,
+        isFetching: state.usersPage.isFetching,
     }
 }
 export default connect(mapStateToProps, { login })(Login)

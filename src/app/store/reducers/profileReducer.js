@@ -82,10 +82,8 @@ export const getStatus = (userId) => async (dispatch) => {
     dispatch(setStatus(res.data))
 }
 export const updateStatus = (status) => async (dispatch) => {
-    const res = await profileApi.updateStatus(status)
-    if (res.data.resultCode === 0) {
-        dispatch(setStatus(status))
-    }
+    await profileApi.updateStatus(status)
+    dispatch(setStatus(status))
 }
 
 // *Profile of exact user*
